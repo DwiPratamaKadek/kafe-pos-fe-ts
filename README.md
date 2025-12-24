@@ -14,23 +14,51 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Set Up 
+```bash 
+kafe-shop/
+│
+├─ .next/                     # Build output Next.js (auto-generated)
+├─ node_modules/              # Dependency project
+├─ public/                    # Asset statis (img, icon, dll)
+│
+├─ src/
+│  ├─ app/                    # App Router (Next.js 13+)
+│  │
+│  ├─ component/              # Komponen UI (Atomic Design)
+│  │  ├─ element/             # Komponen kecil (Button, Card, dll)
+│  │  │  └─ Card.tsx
+│  │  │
+│  │  ├─ organisms/           # Komponen kompleks
+│  │  │  ├─ Footer.tsx
+│  │  │  ├─ Navbar.tsx
+│  │  │  └─ Sidebar.tsx
+│  │
+│  ├─ pages/                  # Halaman (custom / legacy / feature-based)
+│  │  └─ DashboardPage.tsx
+│  │
+│  ├─ lib/                    # Helper / shared logic
+│  │  └─ api/                 # API service / endpoint handler
+│  │     ├─ auth/
+│  │     ├─ cashier/
+│  │     ├─ masterdata/
+│  │     └─ payment/
+│  │
+│  ├─ hooks/                  # Custom React Hooks
+│  │  └─ gsapanimation/
+│  │     └─ GsapHelper.tsx
+│  │
+│  └─ utils/                  # Utility & helper functions
+│     └─ animation/
+│
+├─ .gitignore                 # File/folder yang diabaikan Git
+├─ eslint.config.mjs           # Konfigurasi ESLint
+├─ next-env.d.ts              # Type declaration Next.js
+├─ next.config.ts             # Konfigurasi Next.js
+├─ package-lock.json          # Lock dependency
+├─ package.json               # Dependency & scripts
+├─ postcss.config.mjs         # Konfigurasi PostCSS
+├─ tsconfig.json              # Konfigurasi TypeScript
+└─ README.md                  # Dokumentasi project
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
